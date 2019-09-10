@@ -1,0 +1,16 @@
+
+article {
+    height: 400px;
+    position: relative;
+    display: grid;
+    border-radius: 2rem;
+    background-color: #F9F8F8;
+    padding: 2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+}
