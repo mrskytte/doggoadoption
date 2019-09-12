@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:700|Josefin+Sans&display=swap');/*"Archivo Narrow", sans-serif*/
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');/*"Shadows Into Light", cursive*/
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");/*'Quicksand', sans-serif;*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --bg-color: #026670;
+    --link-color: #297CB3;
+    --link-hover-color: #54BBFF;
+    --color-4: #B37317;
+    --color-5: #FAF3DD;
+
+    --primary-font:"Archivo Narrow", sans-serif;
+
+    --secondary-font:"Quicksand", sans-serif;;
+    --main-text-color: #000;
+
+    --white-space: 1rem;
+}
+
+
+html {
+    font-size: 100%;
+    font-family: var(--primary-font);
+}
+
+header,
+main,
+footer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: calc(2*var(--white-space));
+}
+
+.full-width {
+    background: var(--link-color);
+    background-image: url(/styletyle/dots.png);
+    color: black;
+    width: 100%
+}
+
+.header-wrapper h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    padding-right: .75em;
+    font-weight: bold;
+    color: black;
+}
+
+.header-wrapper h2 {
+    font-size: 1.6em;
+    color: #808080;
+    font-weight: bold;
+    margin: var(--white-space) 0;
+}
+
+main {
+    padding: calc(2*var(--white-space));
+}
+
+section {
+    margin-bottom: calc(2*var(--white-space));
+}
+
+.section-heading {
+    font-family: var(--primary-font);
+    font-size: 1.3rem;
+    color: #808080;
+    margin: .5rem 0;
+    text-align: left;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swatches li {
+    margin-right: 5vw;
+    height: 15vw;
+    width: 20%;
+}
+
+.swatches{
+    font-size: 10px;
+    text-align: center;
+}
+ul li:last-child {
+    margin-right: 0;
+}
+
+.color-swatch-1 {
+    background-color: var(--bg-color);
+    color: white;
+}
+
+.color-swatch-2 {
+    background-color: var(--link-color);
+}
+
+.color-swatch-3 {
+    background-color: var(--link-hover-color);
+}
+
+.color-swatch-4 {
+    background-color: var(--color-4);
+}
+
+.color-swatch-5 {
+    background-color: var(--color-5);
+}
+
+.textures li {
+    height: 30vw;
+    width: 40%;
+    margin-right: 5vw;
+}
+
+.texture-swatch-2 {
+    background: url(/styletyle/cloud.png) top left repeat;
+}
+
+.texture-swatch-1 {
+    background: url(/styletyle/dots.png) top left repeat;
+}
+
+.texture-swatch-3 {
+    background: url(/styletyle/leaves.png) top left repeat;
+}
+
+button {
+    padding: 1rem;
+    border-radius: 12px;
+    background: var(--link-color);
+    text-align: center;
+    text-decoration: none;
+    font: bold;
+    letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 1rem 1rem 0;
+    box-shadow: 5px 5px 5px grey;
+    border-style: none;
+}
+
+.secondary-button {
+    background-image: url(/img/cloudy-day.png);
+    color: black;
+}
+
+.secondary-button:hover{
+    background-image: url(/img/cloudy-day.png);
+    opacity: 0.5;
+}
+
+button:hover {
+    background-color: var(--link color);
+    opacity: 0.5;
+}
+
+button:active {
+    background-color: var(--bg-color);
+}
+
+.typography-main {
+    color: var(--main-text-color);
+}
+
+.h1-sample {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.h2-sample {
+    font-family: var(--secondary-font);
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+p.typography-sample {
+    font-family: var(--secondary-font);
+    line-height: 1.5;
+    max-width: 960px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    font-family: var(--primary-font);
+    color: var(--link-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+p[class*="font-details-"] {
+    margin-top: .5rem;
+    margin-bottom: calc(2*var(--white-space));
+    font-size: 0.75rem;
+    font-family: var(--secondary-font);
+    color: #6f6f6f;
+}
+
+.adjectives ul {
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+.adjectives ul {
+    flex-direction: column;
+}
+
+footer {
+    font-style: bold;
+}
+
+@media (min-width:800px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+    }
+
+    .swatches li {
+        margin-right: 3%;
+        height: 10vw;
+        width: 20%;
+    }
+
+    .textures li {
+        height: 15vw;
+    }
+}
+
+@media (min-width:900px) {
+    .adjectives ul {
+        flex-direction: row;
+    }
+}
