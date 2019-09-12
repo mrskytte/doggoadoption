@@ -9,6 +9,8 @@
 </head>
 
 <body>
+
+=======
     <div class="filters">
         <!--<div class="dropdown">-->
             <div class="breedFilter">Breed <!--&#8964; WANT TO ADD THIA ARROW ON HOVER TOO BUT WAS PISSING ME OFF--></div>
@@ -24,23 +26,39 @@
         </div>
     </div>
     <main>
-        <template>
-            <article>
-                <p class="id"></p>
-                <p class="breed"></p>
-                <p class="name"></p>
-                <p class="sex"></p>
-                <p class="bday"></p>
-                <p class="shortD"></p>
-                <p class="longD"></p>
-                <p class="childFriend"></p>
-                <p class="category"></p>
+       <div class="data-modal-bg modal-bg hide">
+            <article class="data-modal modal">
+                <img class="data-modal-img modal-img" alt="Dog Image" src="#">
+                <h1 class="name"></h1>
+                <p class="data-modal-breed modal-breed"></p>
+                <p class="data-modal-sex modal-sex"></p>
+                <p class="data-modal-birthday modal-birthday"></p>
+                <p class="data-modal-long-description modal-long-description"></p>
+                <p class="data-modal-child-friend modal-child-friend"></p>
+                <p class="data-modal-other-animals modal-other-animals"></p>
+                <p class="data-modal-category modal-breed"></p>
+                <p class="data-modal-area modal-area"></p>
+                <p class="data-modal-time-in modal-time-in"></p>
             </article>
-
-            sss
-        </template>
+      </div>
     </main>
-
+<template>
+             <article>
+            <img src="assets/imgs/beagle.jpg" alt="Dog Image" class="data-img">
+            <h1 class="data-name name">John</h1>
+            <p class="data-time-in time-in">Been here: 1d 03h 45s</p>
+            <div class="info-wrapper">
+                <p class="data-breed breed">Beagle</p>
+                <div class="separator-dot"></div>
+                <p class="data-category category">Puppy</p>
+            </div>
+            <div class="buttons">
+                <button class="more">MORE</button>
+                <button class="meet">MEET</button>
+                <button class="favourite">Star</button>
+            </div>
+        </article>
+        </template>
     <script src="main.js"></script>
 </body>
 
