@@ -40,8 +40,11 @@ function showDoggos(doggoData) {
     myCopy.querySelector(".data-breed").textContent = doggoData.gsx$breed.$t;
     myCopy.querySelector(".data-category").textContent = doggoData.gsx$category.$t;
     myCopy.querySelector(".data-time-in").textContent = "Been here: " + Math.floor(num_years) + " Years " + Math.floor(num_months) + " Months " + Math.floor(num_days) + " Days";
-    myCopy.querySelector(".data-img").setAttribute("src", imageName)
-
+    if (!doggoData.gsx$img.$t) {
+        myCopy.querySelector(".data-img").setAttribute("src", "assets/imgs/no_img/adopt-me.png")
+    } else {
+        myCopy.querySelector(".data-img").setAttribute("src", imageName)
+    }
 
     // Add Eventlistener to Cards on hover
     let card = myCopy.querySelector("article")
