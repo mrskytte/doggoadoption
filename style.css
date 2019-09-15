@@ -77,7 +77,7 @@ img {
 }
 
 .separator-dot {
-    background-color: var(--main-font-color);
+    background-color: var(--main-text-color);
     height: .3rem;
     width: .3rem;
     border-radius: 50%;
