@@ -116,6 +116,15 @@ button {
     cursor: pointer;
 }
 
+/* Javascript Hover */
+
+.hover {
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 50%;
+}
+
 /*.dropdown {
   position: relative;
   display: inline-block;
