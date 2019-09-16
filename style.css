@@ -173,8 +173,12 @@ button {
     margin: auto;
 }
 
-.contact-input {
+.modal-label {
     background-color: var(--color-2);
+}
+
+.contact-input {
+    background-color: var(--color-1);
     padding: .3rem 0 .3rem 0;
     border: none;
     margin-bottom: .3rem;

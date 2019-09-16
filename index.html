@@ -58,14 +58,11 @@
                 <div class="modal-meet-wrap">
                     <h2 class="contact">CONTACT</h2>
                     <form action="" class="contact-form">
-                        <div class="namefield">
-                            <label for="name">Your Name:</label>
-                            <input class="contact-input" name="name" type="text" placeholder="Your Name" size="40" required>
-                        </div>
-                        <div class="datefield">
-                            <label for="date">Prefered date for meet-up: </label>
-                            <input class="contact-input" type="date" min="2019-09-01">
-                        </div>
+                        <label class="modal-label" for="name">Your Name:</label>
+                        <input class="contact-input" name="name" type="text" placeholder="Your Name" size="40" required>
+                        <label class="modal-label" for="date">Prefered date for meet-up: </label>
+                        <input class="contact-input" type="date" min="2019-09-01">
+                        <label class="modal-label" for="describeyoutself">Describe Yourself</label>
                         <textarea class="contact-input" name="describeyourself" cols="30" rows="10" placeholder="Who are you?" required></textarea>
                         <input class="dropbtn" type="submit">
                     </form>
