@@ -23,20 +23,57 @@
         </div>
     </header>
     <main>
-        <div class="data-modal-bg modal-bg hide">
+        <div class="data-modal-wrap modal-wrap">
+
             <article class="data-modal modal">
-                <img class="data-modal-img modal-img" alt="Dog Image" src="#">
-                <h1 class="name"></h1>
-                <p class="data-modal-breed modal-breed"></p>
-                <p class="data-modal-sex modal-sex"></p>
-                <p class="data-modal-birthday modal-birthday"></p>
-                <p class="data-modal-long-description modal-long-description"></p>
-                <p class="data-modal-child-friend modal-child-friend"></p>
-                <p class="data-modal-other-animals modal-other-animals"></p>
-                <p class="data-modal-category modal-breed"></p>
-                <p class="data-modal-area modal-area"></p>
-                <p class="data-modal-time-in modal-time-in"></p>
+                <h1 class="modal-name">Piper</h1>
+                <img class="data-modal-img modal-img" alt="Dog Image" src="assets/imgs/dogs/maltese.jpg">
+                <div class="modal-info-wrap">
+                    <h2 class="modal-information">INFORMATION</h2>
+                    <div class="info-body-wrap">
+                        <div class="info-titles">
+                            <p class="info-title">Breed</p>
+                            <p class="info-title">Sex</p>
+                            <p class="info-title">Birthday</p>
+                            <p class="info-title">Child Friendly</p>
+                            <p class="info-title">Other animal</p>
+                            <p class="info-title">Location</p>
+                            <p class="info-title">Time in shelter</p>
+                        </div>
+                        <div class="info-bodies">
+                            <p class="info-body data-modal-breed modal-breed">Maltese</p>
+                            <p class="info-body data-modal-sex modal-sex">Female</p>
+                            <p class="info-body data-modal-birthday modal-birthday">2019-02-01 Puppy</p>
+                            <p class="info-body data-modal-child-friend modal-child-friend">Yes</p>
+                            <p class="info-body data-modal-other-animals modal-other-animals">Yes</p>
+                            <p class="info-body data-modal-area modal-area">Copenhagen</p>
+                            <p class="info-body data-modal-time-in modal-time-in">2019-05-05</p>
+                        </div>
+                    </div>
+                    <div class="info-description">
+                        <p class="description-title">Description</p>
+                        <p class="description-body data-modal-long-description modal-long-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ratione placeat, possimus unde repudiandae explicabo ex quidem. Ratione unde sapiente molestiae odit natus, cum consequuntur harum fuga quisquam quam, fugit amet ab, omnis doloremque officia beatae aspernatur! Et aspernatur fugiat non natus delectus expedita, minima dignissimos assumenda modi incidunt quo.</p>
+                    </div>
+                </div>
+                <div class="modal-meet-wrap">
+                    <h2 class="contact">CONTACT</h2>
+                    <form action="" class="contact-form">
+                        <div class="namefield">
+                            <label for="name">Your Name:</label>
+                            <input class="contact-input" name="name" type="text" placeholder="Your Name" size="40" required>
+                        </div>
+                        <div class="datefield">
+                            <label for="date">Prefered date for meet-up: </label>
+                            <input class="contact-input" type="date" min="2019-09-01">
+                        </div>
+                        <textarea class="contact-input" name="describeyourself" cols="30" rows="10" placeholder="Who are you?" required></textarea>
+                        <input class="dropbtn" type="submit">
+                    </form>
+                </div>
             </article>
+            <div class="data-modal-bg modal-bg"></div>
+        </div>
+        <div class="cardwrap">
         </div>
     </main>
     <template>
