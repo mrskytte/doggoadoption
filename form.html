@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+     <form name="submit-to-google-sheet" onSubmit="window.location.reload();">
+  <input name="breed" type="text" placeholder="Breed" required>
+  <input name="name" type="text" placeholder="Name" required>
+  <input name="sex" type="radio" value="male" checked>
+  <input name="sex" type="radio" value="female">
+  <input name="birthday" type="date" placeholder="YYYY-MM-DD" required>
+  <input name="longDescription" type="text" placeholder="Description" required>
+  <input name="childFriendly" type="radio" value="Yes">
+  <input name="childFriendly" type="radio" value="No">
+  <input name="area" type="text" placeholder="Area">
+  <button type="submit">Send</button>
+</form>
+
+
+    <script>
+    // Enable forms to paste to spreadsheet
+const scriptURL = 'https://script.google.com/macros/s/AKfycbysly9ZGqYFqKKkXG2NoVeMGw364cqzIDvYUnb_mJRlS3hhUxj7/exec'
+  const form = document.forms['submit-to-google-sheet']
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+    </script>
+</body>
+</html>
