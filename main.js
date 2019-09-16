@@ -39,9 +39,22 @@ function showDoggos(doggoData) {
     myCopy.querySelector(".data-name").textContent = doggoData.gsx$name.$t;
     myCopy.querySelector(".data-breed").textContent = doggoData.gsx$breed.$t;
     myCopy.querySelector(".data-category").textContent = doggoData.gsx$category.$t;
-    myCopy.querySelector(".data-time-in").textContent = "Been here: " + Math.floor(num_years) + " Years " + Math.floor(num_months) + " Months " + Math.floor(num_days) + " Days";
-    myCopy.querySelector(".data-img").setAttribute("src", imageName)
+    if (Math.floor(num_years) == 0 && Math.floor(num_months) == 0 && Math.floor(num_days) == 0) {
+        myCopy.querySelector(".data-time-in").textContent = "Came in today";
+    } else if (Math.floor(num_years) == 0 && Math.floor(num_months) == 0) {
+        myCopy.querySelector(".data-time-in").textContent = "Been here: " + Math.floor(num_days) + " Days";
+    } else if (Math.floor(num_years) == 0) {
+        myCopy.querySelector(".data-time-in").textContent = "Been here: " + " Years " + Math.floor(num_months) + " Months " + Math.floor(num_days) + " Days";
+    } else {
+        myCopy.querySelector(".data-time-in").textContent = "Been here: " + Math.floor(num_years) + " Years " + Math.floor(num_months) + " Months " + Math.floor(num_days) + " Days";
+    }
 
+
+    if (!doggoData.gsx$img.$t) {
+        myCopy.querySelector(".data-img").setAttribute("src", "assets/imgs/no_img/adopt-me.png")
+    } else {
+        myCopy.querySelector(".data-img").setAttribute("src", imageName)
+    }
 
     // Add Eventlistener to Cards on hover
     let card = myCopy.querySelector("article")
