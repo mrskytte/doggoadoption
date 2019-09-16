@@ -79,7 +79,38 @@ function showDoggos(doggoData) {
 
     // Open up modal on click
     card.addEventListener("click", () => {
-       modalBackground.classList.remove("hide")
+        modalBackground.classList.remove("hide");
+        modal.querySelector(".data-modal-name").textContent = doggoData.gsx$name.$t;
+        modal.querySelector(".data-modal-breed").textContent = doggoData.gsx$breed.$t;
+        modal.querySelector(".data-modal-sex").textContent = doggoData.gsx$sex.$t;
+        modal.querySelector(".data-modal-birthday").textContent = doggoData.gsx$birthday.$t + "Puppy";
+        if (!doggoData.gsx$childfriendly.$t) {
+            modal.querySelector(".data-modal-child-friend").textContent = "No";
+        } else {
+            modal.querySelector(".data-modal-child-friend").textContent = "Yes";
+        }
+        if (!doggoData.gsx$otheranimals.$t) {
+            modal.querySelector(".data-modal-other-animals").textContent = "No";
+        } else {
+            modal.querySelector(".data-modal-other-animals").textContent = "Yes";
+        }
+
+        if (Math.floor(num_years) == 0 && Math.floor(num_months) == 0 && Math.floor(num_days) == 0) {
+            modal.querySelector(".data-modal-time-in").textContent = "Came in today";
+        } else if (Math.floor(num_years) == 0 && Math.floor(num_months) == 0) {
+            modal.querySelector(".data-modal-time-in").textContent = Math.floor(num_days) + " Days";
+        } else if (Math.floor(num_years) == 0) {
+            modal.querySelector(".data-modal-time-in").textContent = Math.floor(num_months) + " Months " + Math.floor(num_days) + " Days";
+        } else {
+            modal.querySelector(".data-modal-time-in").textContent = Math.floor(num_years) + " Years " + Math.floor(num_months) + " Months "
+        }
+        if (!doggoData.gsx$img.$t || doggoData.gsx$img.$t == "undefined") {
+            modal.querySelector(".data-modal-img").setAttribute("src", "assets/imgs/no_img/adopt-me.png")
+        } else {
+            modal.querySelector(".data-modal-img").setAttribute("src", imageName)
+        }
+        modal.querySelector(".data-modal-long-description").textContent = doggoData.gsx$longdescription.$t;
+
     })
 
 
@@ -90,18 +121,18 @@ function showDoggos(doggoData) {
 // JavaScript click for filter
 
 function clickMe() {
-  document.getElementById("filter").classList.toggle("show");
+    document.getElementById("filter").classList.toggle("show");
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown_content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown_content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
     }
-  }
 }
