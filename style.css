@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:700|Josefin+Sans&display=swap');/*"Archivo Narrow", sans-serif*/
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");/*'Quicksand', sans-serif;*/
 
@@ -29,33 +27,11 @@
     --border-radius: .4rem;
 }
 
->>>>>>> origin/master
 * {
     box-sizing: border-box;
     font-family: var(--secondary-font);
         color: var(--main-text-color);
 }
-
-<<<<<<< HEAD
-:root {
-    --bg-color: lightblue;
-    --color1: #007BA7;
-    --color2: '#';
-    --link-color: #65d1fb;
-    --link-hover-color: #ff8500;
-    --color-4: #05abeb;
-    --color-5: #ff241f;
-
-    --primary-font: "Open Sans", sans-serif;
-    --secondary-font: "Droid Serif", serif;
-    --main-font-color: #222222;
-
-    --white-space: 1rem;
-    --border-radius: .4rem;
-}
-=======
-
->>>>>>> origin/master
 
 main {
     width: 80%;
@@ -162,7 +138,6 @@ button {
     justify-content: space-between;
 }
 
-<<<<<<< HEAD
 .dropdown_content {
     display: none;
     position: absolute;
@@ -185,30 +160,7 @@ button {
 
 .dropdown a:hover {
     background-color: lightblue;
-=======
-.breedFilter,
-.ageFilter,
-.genderFilter,
-.sizeFilter,
-.timeFilter {
-    display: inline-block;
-    background-color: var(--color-2);
-    color: var(--secondary-text-color);
-    padding: .5rem 4rem .5rem .5rem;
-    box-shadow: 0 1px 3px rgba(77, 71, 81, .2);
-    border-radius: 4px;
-    margin-right: 1rem;
 }
-
-.breedFilter:hover,
-.ageFilter:hover,
-.genderFilter:hover,
-.sizeFilter:hover,
-.timeFilter:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
 /* Javascript Hover */
 
 .hover {
@@ -218,19 +170,13 @@ button {
     border-radius: 50%;
 }
 
-/*.dropdown {
-  position: relative;
-  display: inline-block;
->>>>>>> origin/master
-}
-
 .show {
     display: flex;
     flex-direction: row;
 }
 
 .timeFilter {
-    background-color: #3498DB;
+    background-color: var(--color-3);
     color: white;
     cursor: pointer;
     font-family: var(--primary-font);
