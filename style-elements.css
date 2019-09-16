@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:700|Josefin+Sans&display=swap');/*"Archivo Narrow", sans-serif*/
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");/*'Quicksand', sans-serif;*/
+
+:root {
+    --color-1: #026670; /*green: when use opacity 20% or 40%*/
+    --link-color: #297CB3; /*blue*/
+    --link-hover-color: #54BBFF; /*light-blue*/
+    --color-4: #B37317; /*brown*/
+    --color-5: #FAF3DD; /*creme*/
+
+    --primary-font:"Archivo Narrow", sans-serif;
+
+    --secondary-font:"Quicksand", sans-serif;;
+    --main-text-color: #000;
+
+    --white-space: 1rem;
+}
