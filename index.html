@@ -9,24 +9,21 @@
 </head>
 
 <body>
-
-=======
-    <div class="filters">
-        <!--<div class="dropdown">-->
-            <div class="breedFilter">Breed <!--&#8964; WANT TO ADD THIA ARROW ON HOVER TOO BUT WAS PISSING ME OFF--></div>
-            <div class="ageFilter">Age</div>
-            <div class="genderFilter">Gender</div>
-            <div class="sizeFilter">Size</div>
-            <!--<div class="dropdown-content">
-                <!--<a href="#">Small</a>
-                <a href="#">Medium</a>
-                <a href="#">Large</a>
-            </div>-->
-            <div class="timeFilter">Time in care</div>
+    <header>
+        <div class="filters">
+            <div class="dropdown">
+                <button onclick="clickMe()" class="dropbtn">Sort by</button>
+                <div id="filter" class="dropdown_content">
+                    <a href="#">Age</a>
+                    <a href="#">Gender</a>
+                    <a href="#">Size</a>
+                    <a href="#">Breed</a></div>
+            </div>
+            <button class="timeFilter">Time in care &#8964;</button>
         </div>
-    </div>
+    </header>
     <main>
-       <div class="data-modal-bg modal-bg hide">
+        <div class="data-modal-bg modal-bg hide">
             <article class="data-modal modal">
                 <img class="data-modal-img modal-img" alt="Dog Image" src="#">
                 <h1 class="name"></h1>
@@ -40,10 +37,10 @@
                 <p class="data-modal-area modal-area"></p>
                 <p class="data-modal-time-in modal-time-in"></p>
             </article>
-      </div>
+        </div>
     </main>
-<template>
-             <article>
+    <template>
+        <article>
             <img src="assets/imgs/beagle.jpg" alt="Dog Image" class="data-img">
             <h1 class="data-name name">John</h1>
             <p class="data-time-in time-in">Been here: 1d 03h 45s</p>
@@ -58,7 +55,7 @@
                 <button class="favourite">Star</button>
             </div>
         </article>
-        </template>
+    </template>
     <script src="main.js"></script>
 </body>
 
