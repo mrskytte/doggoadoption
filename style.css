@@ -1,7 +1,42 @@
-* {
-    box-sizing: border-box;
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:700|Josefin+Sans&display=swap');/*"Archivo Narrow", sans-serif*/
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");/*'Quicksand', sans-serif;*/
+
+:root {
+    /*green: opacity 20%*/
+    --color-1: #EAF2F3;
+    /*green: opacity 40%*/
+    --color-2: #98C0C4;
+    /*green*/
+    --color-3: #026670;
+    /*blue*/
+    --link-color: #297CB3;
+    /*light-blue*/
+    --link-hover-color: #54BBFF;
+    /*brown*/
+    --color-4: #B37317;
+    /*creme*/
+    --color-5: #FAF3DD;
+
+    --primary-font: "Archivo Narrow", sans-serif;
+
+    --secondary-font: "Quicksand", sans-serif;
+    --main-text-color: #000;
+    --secondary-text-color: #FAF3DD;
+
+    --white-space: 1rem;
+    --border-radius: .4rem;
 }
 
+>>>>>>> origin/master
+* {
+    box-sizing: border-box;
+    font-family: var(--secondary-font);
+        color: var(--main-text-color);
+}
+
+<<<<<<< HEAD
 :root {
     --bg-color: lightblue;
     --color1: #007BA7;
@@ -18,6 +53,9 @@
     --white-space: 1rem;
     --border-radius: .4rem;
 }
+=======
+
+>>>>>>> origin/master
 
 main {
     width: 80%;
@@ -30,7 +68,7 @@ article {
     position: relative;
     display: grid;
     border-radius: var(--border-radius);
-    background-color: var(--bg-color);
+    background-color: var(--color-1);
     text-align: center;
     line-height: .1rem;
     padding-bottom: 1rem;
@@ -61,7 +99,7 @@ img {
 }
 
 .separator-dot {
-    background-color: var(--main-font-color);
+    background-color: var(--main-text-color);
     height: .3rem;
     width: .3rem;
     border-radius: 50%;
@@ -73,14 +111,16 @@ img {
     justify-content: space-around;
     margin-top: .5rem;
     width: 80%;
+    cursor: pointer;
 }
 
 button {
     border: none;
-    background-color: var(--color-4);
+    background-color: var(--color-3);
     padding: 1rem;
     border-radius: var(--border-radius);
     font-size: 1rem;
+       color: var(--secondary-text-color);
 }
 
 .dropbtn {
@@ -122,6 +162,7 @@ button {
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .dropdown_content {
     display: none;
     position: absolute;
@@ -144,6 +185,43 @@ button {
 
 .dropdown a:hover {
     background-color: lightblue;
+=======
+.breedFilter,
+.ageFilter,
+.genderFilter,
+.sizeFilter,
+.timeFilter {
+    display: inline-block;
+    background-color: var(--color-2);
+    color: var(--secondary-text-color);
+    padding: .5rem 4rem .5rem .5rem;
+    box-shadow: 0 1px 3px rgba(77, 71, 81, .2);
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.breedFilter:hover,
+.ageFilter:hover,
+.genderFilter:hover,
+.sizeFilter:hover,
+.timeFilter:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Javascript Hover */
+
+.hover {
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 50%;
+}
+
+/*.dropdown {
+  position: relative;
+  display: inline-block;
+>>>>>>> origin/master
 }
 
 .show {
