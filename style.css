@@ -96,13 +96,6 @@ button {
     transition: 0.4s;
 }
 
-/*.dropbtn span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.4s;
-} */
-
 .dropbtn:after {
     content: '\00bb';
     margin-left: 8px;
@@ -122,15 +115,11 @@ button {
     right: 0;
 }
 
-/*.dropbtn:hover,
-.dropbtn:focus {
-    background-color: #2980B9;
-}*/
-
 .dropdown {
     position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .dropdown_content {
@@ -160,4 +149,19 @@ button {
 .show {
     display: flex;
     flex-direction: row;
+}
+
+.timeFilter {
+    background-color: #3498DB;
+    color: white;
+    cursor: pointer;
+    font-family: var(--primary-font);
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+
 }
