@@ -48,3 +48,6 @@ function showDoggos(doggoData) {
     document.querySelector("main").appendChild(myCopy)
 
 }
+// JavaScript click for filter
+
+
