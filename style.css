@@ -90,12 +90,42 @@ button {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    transition: all 0.4s;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
 }
 
-.dropbtn:hover,
+/*.dropbtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+} */
+
+.dropbtn:after {
+    content: '\00bb';
+    margin-left: 8px;
+    position: relative;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+}
+
+.dropbtn:hover {
+    padding-right: 25px;
+}
+
+.dropbtn:hover:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*.dropbtn:hover,
 .dropbtn:focus {
     background-color: #2980B9;
-}
+}*/
 
 .dropdown {
     position: relative;
@@ -111,7 +141,7 @@ button {
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    margin-left: 5.5rem;
+    margin-left: 6.8rem;
 }
 
 .dropdown_content a {
@@ -120,6 +150,7 @@ button {
     font-family: var(--primary-font);
     text-decoration: none;
     display: block;
+    border-radius: var(--border-radius);
 }
 
 .dropdown a:hover {
