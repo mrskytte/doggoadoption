@@ -2,6 +2,15 @@
 const link = "https://spreadsheets.google.com/feeds/list/1qABL59AhMRLBAoIg8XRuN3Aax98QuyqUxZ1IIADjBLQ/od6/public/values?alt=json";
 window.addEventListener("load", getData);
 
+// Define modal elements
+
+let modalBackground = document.querySelector(".data-modal-wrap");
+let modal = document.querySelector(".data-modal");
+
+modalBackground.addEventListener("click", () => {
+    modalBackground.classList.add("hide");
+})
+
 // Fetch our Data
 
 function getData() {
@@ -61,9 +70,16 @@ function showDoggos(doggoData) {
     let img = myCopy.querySelector(".data-img")
     card.addEventListener("mouseenter", () => {
         img.classList.add("hover");
+        card.classList.add("hover-card");
     })
     card.addEventListener("mouseleave", () => {
         img.classList.remove("hover");
+        card.classList.remove("hover-card")
+    })
+
+    // Open up modal on click
+    card.addEventListener("click", () => {
+       modalBackground.classList.remove("hide")
     })
 
 
