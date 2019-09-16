@@ -9,31 +9,19 @@
 </head>
 
 <body>
-
-    =======
-    <div class="dropdown">
-        <!--<div class="dropdown">-->
-        <button onclick="clickMe()" class="dropbtn">Sort by</button>
-        <div id="filter" class="dropdown_content">
-            <a href="#">Age</a>
-            <a href="#">Gender</a>
-            <a href="#">Size</a>
-            <a href="#">Breed</a></div>
-
-
-
-
-        <!--&#8964; WANT TO ADD THIA ARROW ON HOVER TOO BUT WAS PISSING ME OFF-->
-        <!--<div class="ageFilter">Age</div>
-            <div class="genderFilter">Gender</div>
-            <div class="sizeFilter">Size</div>
-            <!--<div class="dropdown-content">
-                <!--<a href="#">Small</a>
-                <a href="#">Medium</a>
-                <a href="#">Large</a>
-            </div>-->
-    </div>
-    <div class="timeFilter">Time in care</div>
+    <header>
+        <div class="filters">
+            <div class="dropdown">
+                <button onclick="clickMe()" class="dropbtn">Sort by</button>
+                <div id="filter" class="dropdown_content">
+                    <a href="#">Age</a>
+                    <a href="#">Gender</a>
+                    <a href="#">Size</a>
+                    <a href="#">Breed</a></div>
+            </div>
+            <button class="timeFilter">Time in care &#8964;</button>
+        </div>
+    </header>
     <main>
         <div class="data-modal-bg modal-bg hide">
             <article class="data-modal modal">
@@ -69,4 +57,6 @@
         </article>
     </template>
     <script src="main.js"></script>
-</body></html>
+</body>
+
+</html>
