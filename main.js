@@ -24,7 +24,7 @@ function showDoggos(doggoData) {
 
     // Calculate years, months and days in
     let today = new Date();
-    let timeRescued = new Date(doggoData.gsx$timein.$t);
+    let timeRescued = new Date(doggoData.gsx$timestamp.$t);
     var diff_date = today - timeRescued;
 
     var num_years = diff_date / 31536000000;
@@ -44,13 +44,13 @@ function showDoggos(doggoData) {
     } else if (Math.floor(num_years) == 0 && Math.floor(num_months) == 0) {
         myCopy.querySelector(".data-time-in").textContent = "Been here: " + Math.floor(num_days) + " Days";
     } else if (Math.floor(num_years) == 0) {
-        myCopy.querySelector(".data-time-in").textContent = "Been here: " + " Years " + Math.floor(num_months) + " Months " + Math.floor(num_days) + " Days";
+        myCopy.querySelector(".data-time-in").textContent = "Been here: " + Math.floor(num_months) + " Months " + Math.floor(num_days) + " Days";
     } else {
         myCopy.querySelector(".data-time-in").textContent = "Been here: " + Math.floor(num_years) + " Years " + Math.floor(num_months) + " Months " + Math.floor(num_days) + " Days";
     }
 
 
-    if (!doggoData.gsx$img.$t) {
+    if (!doggoData.gsx$img.$t || doggoData.gsx$img.$t == "undefined") {
         myCopy.querySelector(".data-img").setAttribute("src", "assets/imgs/no_img/adopt-me.png")
     } else {
         myCopy.querySelector(".data-img").setAttribute("src", imageName)
@@ -68,7 +68,7 @@ function showDoggos(doggoData) {
 
 
     // Appends cards to main
-    document.querySelector("main").appendChild(myCopy)
+    document.querySelector(".cardwrap").appendChild(myCopy)
 
 }
 // JavaScript click for filter
