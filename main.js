@@ -4,11 +4,12 @@ window.addEventListener("load", getData);
 
 // Define modal elements
 
-let modalBackground = document.querySelector(".data-modal-wrap");
+let modalWrap = document.querySelector(".data-modal-wrap")
+let modalBackground = document.querySelector(".data-modal-bg");
 let modal = document.querySelector(".data-modal");
 
 modalBackground.addEventListener("click", () => {
-    modalBackground.classList.add("hide");
+    modalWrap.classList.add("hide");
 })
 
 // Fetch our Data
@@ -79,7 +80,7 @@ function showDoggos(doggoData) {
 
     // Open up modal on click
     card.addEventListener("click", () => {
-        modalBackground.classList.remove("hide");
+        modalWrap.classList.remove("hide");
         modal.querySelector(".data-modal-name").textContent = doggoData.gsx$name.$t;
         modal.querySelector(".data-modal-breed").textContent = doggoData.gsx$breed.$t;
         modal.querySelector(".data-modal-sex").textContent = doggoData.gsx$sex.$t;
