@@ -72,11 +72,19 @@ main {
     text-align: center;
 }
 
-.flex-container > div {
+.flex-container > div,
+h3 {
     background-color: var(--color-2);
     color: var(--secondary-text-color);
+    margin: 15px;
+    font-size: 15px;
     padding: 1rem;
-    margin: 5px;
+
+}
+
+.logoimages {
+    height: auto;
+    width: auto;
 }
 
 .hide {
