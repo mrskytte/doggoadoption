@@ -209,6 +209,7 @@ nav {
 }
 
 .icon {
+    padding-top: 1rem;
     height: 30px;
     width: auto;
 }
@@ -217,9 +218,4 @@ nav {
     padding-left: 1rem;
     padding-right: 1rem;
     align-items: center;
-}
-
-.logodiv:hover:not(.active) {
-    background-color: var(--color-1);
-    color: var(--main-text-color);
 }
