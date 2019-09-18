@@ -45,6 +45,10 @@ function showDoggos(doggoData) {
     let template = document.querySelector("template").content;
     let myCopy = template.cloneNode(true);
 
+    // Add sorting classes
+
+    myCopy.querySelector(".data-article").classList.add(doggoData.gsx$sex.$t)
+
     // Inputs data to cards
     myCopy.querySelector(".data-name").textContent = doggoData.gsx$name.$t;
     myCopy.querySelector(".data-breed").textContent = doggoData.gsx$breed.$t;
@@ -137,3 +141,35 @@ window.onclick = function (event) {
         }
     }
 }
+
+// JavaScript for sorting filter
+
+let sortAge = document.querySelector(".age")
+let sortGender = document.querySelector(".gender")
+let resetSort = document.querySelector(".reset")
+
+var genderCounter = 0
+
+sortGender.addEventListener("click", () => {
+            resetSort.classList.remove("hide");
+            let sortMale = document.querySelectorAll(".male")
+            if (genderCounter == 0) {
+                sortMale.forEach(showMales);
+
+                function showMales(showMale) {
+                    showMale.style.order = -1;
+                }
+                genderCounter++;
+            } else {
+                sortMale.forEach(showMales);
+
+                function showMales(showMale) {
+                    showMale.style.order = 1;
+                    genderCounter = 0;
+                }
+            }})
+
+        sortAge.addEventListener("click", () => {
+            console.log("working")
+            resetSort.classList.remove("hide");
+        })

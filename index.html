@@ -14,10 +14,10 @@
             <div class="dropdown">
                 <button onclick="clickMe()" class="dropbtn">Sort by</button>
                 <div id="filter" class="dropdown_content">
-                    <a href="#">Age</a>
-                    <a href="#">Gender</a>
-                    <a href="#">Size</a>
-                    <a href="#">Breed</a></div>
+                    <a class="age" href="#">Age</a>
+                    <a class="gender" href="#">Gender</a>
+                    <a class="hide reset" href="#">Reset</a>
+                </div>
             </div>
             <button class="timeFilter">Time in care &#8964;</button>
         </div>
@@ -74,7 +74,7 @@
         </div>
     </main>
     <template>
-        <article>
+        <article class="data-article">
             <img src="assets/imgs/beagle.jpg" alt="Dog Image" class="data-img">
             <h1 class="data-name name">John</h1>
             <p class="data-time-in time-in">Been here: 1d 03h 45s</p>
