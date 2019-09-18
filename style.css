@@ -65,7 +65,7 @@ main {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 img {

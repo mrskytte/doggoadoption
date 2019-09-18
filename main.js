@@ -45,10 +45,14 @@ function showDoggos(doggoData) {
     let template = document.querySelector("template").content;
     let myCopy = template.cloneNode(true);
 
+    // Add sorting classes
+
+    myCopy.querySelector(".data-article").classList.add(doggoData.gsx$sex.$t)
+
     // Inputs data to cards
     myCopy.querySelector(".data-name").textContent = doggoData.gsx$name.$t;
     myCopy.querySelector(".data-breed").textContent = doggoData.gsx$breed.$t;
-    myCopy.querySelector(".data-category").textContent = doggoData.gsx$category.$t;
+    myCopy.querySelector(".data-category").textContent = Math.floor(num_years);
     if (Math.floor(num_years) == 0 && Math.floor(num_months) == 0 && Math.floor(num_days) == 0) {
         myCopy.querySelector(".data-time-in").textContent = "Came in today";
     } else if (Math.floor(num_years) == 0 && Math.floor(num_months) == 0) {
@@ -137,3 +141,71 @@ window.onclick = function (event) {
         }
     }
 }
+
+// JavaScript for sorting filter
+
+let sortAge = document.querySelector(".age")
+let sortGender = document.querySelector(".gender")
+let resetSort = document.querySelector(".reset")
+
+var genderCounter = 0
+var ageCounter = 0
+
+sortGender.addEventListener("click", () => {
+    resetSort.classList.remove("hide");
+    let sortMale = document.querySelectorAll(".male")
+    if (genderCounter == 0) {
+        sortMale.forEach(showMales);
+
+        function showMales(showMale) {
+            showMale.style.order = -1;
+        }
+        genderCounter++;
+    } else {
+        sortMale.forEach(showMales);
+
+        function showMales(showMale) {
+            showMale.style.order = 1;
+            genderCounter = 0;
+        }
+    }
+})
+
+sortAge.addEventListener("click", () => {
+    resetSort.classList.remove("hide");
+
+    let allCards = document.querySelectorAll(".data-article");
+
+
+    if (ageCounter == 0) {
+        allCards.forEach(showAges)
+
+        function showAges(showAge) {
+            let age = showAge.querySelector(".data-category").textContent
+            showAge.style.order = age
+            ageCounter++
+        }
+    } else {
+        allCards.forEach(showAges)
+
+        function showAges(showAge) {
+            let age = showAge.querySelector(".data-category").textContent
+            showAge.style.order = -age
+            ageCounter = 0
+        }
+    }
+
+})
+
+resetSort.addEventListener("click", () => {
+    let resetSort = document.querySelectorAll(".data-article");
+
+    resetSort.forEach(resets)
+
+    function resets(reset) {
+        let resetCard = reset.querySelectorAll(".data-article")
+        reset.style.order = 0;
+    }
+
+
+})
