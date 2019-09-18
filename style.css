@@ -66,9 +66,10 @@ main {
 
 .flex-container {
     background-color: var(--color-3);
-    display: flex;
-    padding: 2rem;
-    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 3rem;
+    margin-top: 4rem;
     text-align: center;
 }
 
@@ -78,18 +79,28 @@ h3 {
     color: var(--secondary-text-color);
     margin: 15px;
     font-size: 15px;
-    padding: 1rem;
+    padding: .5rem;
+}
+
+.poop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
 
 }
 
-.logoimages {
-    height: auto;
+.partnerLogo {
+    height: 60px;
     width: auto;
+    margin-left: 10px;
 }
+
 
 .hide {
     display: none;
 }
+
 
 img {
     width: 100%;
