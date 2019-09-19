@@ -201,6 +201,7 @@ resetSort.addEventListener("click", () => {
     let resetSort = document.querySelectorAll(".data-article");
 
     resetSort.forEach(resets)
+    resetSort.classList.add("hide");
 
     function resets(reset) {
         let resetCard = reset.querySelectorAll(".data-article")
