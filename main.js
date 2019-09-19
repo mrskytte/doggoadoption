@@ -207,6 +207,4 @@ resetSort.addEventListener("click", () => {
         let resetCard = reset.querySelectorAll(".data-article")
         reset.style.order = 0;
     }
-
-
 })
