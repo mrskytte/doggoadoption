@@ -4,51 +4,99 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>DoggoAdopto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="filters">
-        <!--<div class="dropdown">-->
-            <div class="breedFilter">Breed <!--&#8964; WANT TO ADD THIA ARROW ON HOVER TOO BUT WAS PISSING ME OFF--></div>
-            <div class="ageFilter">Age</div>
-            <div class="genderFilter">Gender</div>
-            <div class="sizeFilter">Size</div>
-            <!--<div class="dropdown-content">
-                <!--<a href="#">Small</a>
-                <a href="#">Medium</a>
-                <a href="#">Large</a>
-            </div>-->
-            <div class="timeFilter">Time in care</div>
+    <header>
+        <div class="logodiv">
+            <a class="nonActive" href="index.html"><img class="icon" src="assets/imgs/logo/dogLogoW.svg" /></a>
         </div>
-    </div>
+        <nav>
+            <ul class="navbar">
+                <li class="navelmt">
+                    <a class="nonActive" href="index.html">ADD</a>
+                </li>
+                <li class="navelmt">
+                    <a class="active" href="index.html">ADOPTING?</a>
+                </li>
+                <li class="navelmt">
+                    <a href="about.html" class="nonActive">ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
-       <div class="data-modal-bg modal-bg hide">
+       <div class="filters">
+            <div class="dropdown">
+                <button onclick="clickMe()" class="dropbtn">Sort by</button>
+                <div id="filter" class="dropdown_content">
+                    <a class="age" href="#">Age</a>
+                    <a class="gender" href="#">Gender</a>
+                    <a class="hide reset" href="#">Reset</a>
+                </div>
+            </div>
+            <button class="timeFilter">Time in care &#8964;</button>
+        </div>
+        <div class="data-modal-wrap modal-wrap hide">
             <article class="data-modal modal">
-                <img class="data-modal-img modal-img" alt="Dog Image" src="#">
-                <h1 class="name"></h1>
-                <p class="data-modal-breed modal-breed"></p>
-                <p class="data-modal-sex modal-sex"></p>
-                <p class="data-modal-birthday modal-birthday"></p>
-                <p class="data-modal-long-description modal-long-description"></p>
-                <p class="data-modal-child-friend modal-child-friend"></p>
-                <p class="data-modal-other-animals modal-other-animals"></p>
-                <p class="data-modal-category modal-breed"></p>
-                <p class="data-modal-area modal-area"></p>
-                <p class="data-modal-time-in modal-time-in"></p>
+                <h1 class="data-modal-name modal-name">Piper</h1>
+                <img class="data-modal-img modal-img" alt="Dog Image" src="assets/imgs/dogs/maltese.jpg">
+                <div class="modal-info-wrap">
+                    <h2 class="modal-information">INFORMATION</h2>
+                    <div class="info-body-wrap">
+                        <div class="info-titles">
+                            <p class="info-title">Breed</p>
+                            <p class="info-title">Sex</p>
+                            <p class="info-title">Birthday</p>
+                            <p class="info-title">Child Friendly</p>
+                            <p class="info-title">Other animal</p>
+                            <p class="info-title">Location</p>
+                            <p class="info-title">Time in shelter</p>
+                        </div>
+                        <div class="info-bodies">
+                            <p class="info-body data-modal-breed modal-breed">Maltese</p>
+                            <p class="info-body data-modal-sex modal-sex">Female</p>
+                            <p class="info-body data-modal-birthday modal-birthday">2019-02-01 Puppy</p>
+                            <p class="info-body data-modal-child-friend modal-child-friend">Yes</p>
+                            <p class="info-body data-modal-other-animals modal-other-animals">Yes</p>
+                            <p class="info-body data-modal-area modal-area">Copenhagen</p>
+                            <p class="info-body data-modal-time-in modal-time-in">2019-05-05</p>
+                        </div>
+                    </div>
+                    <div class="info-description">
+                        <p class="description-title">Description</p>
+                        <p class="description-body data-modal-long-description modal-long-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ratione placeat, possimus unde repudiandae explicabo ex quidem. Ratione unde sapiente molestiae odit natus, cum consequuntur harum fuga quisquam quam, fugit amet ab, omnis doloremque officia beatae aspernatur! Et aspernatur fugiat non natus delectus expedita, minima dignissimos assumenda modi incidunt quo.</p>
+                    </div>
+                </div>
+                <div class="modal-meet-wrap">
+                    <h2 class="contact">CONTACT</h2>
+                    <form action="" class="contact-form">
+                        <label class="modal-label" for="name">Your Name:</label>
+                        <input class="contact-input" name="name" type="text" placeholder="Your Name" size="40" required>
+                        <label class="modal-label" for="date">Prefered date for meet-up: </label>
+                        <input class="contact-input" type="date" min="2019-09-01">
+                        <label class="modal-label" for="describeyoutself">Describe Yourself</label>
+                        <textarea class="contact-input" name="describeyourself" cols="30" rows="10" placeholder="Who are you?" required></textarea>
+                        <input class="dropbtn" type="submit">
+                    </form>
+                </div>
             </article>
-      </div>
+            <div class="data-modal-bg modal-bg"></div>
+        </div>
+        <div class="cardwrap">
+        </div>
     </main>
-<template>
-             <article>
+    <template>
+        <article class="data-article">
             <img src="assets/imgs/beagle.jpg" alt="Dog Image" class="data-img">
             <h1 class="data-name name">John</h1>
             <p class="data-time-in time-in">Been here: 1d 03h 45s</p>
             <div class="info-wrapper">
                 <p class="data-breed breed">Beagle</p>
                 <div class="separator-dot"></div>
-                <p class="data-category category">Puppy</p>
+                <p class="category"><span class="data-category"></span> Years old</p>
             </div>
             <div class="buttons">
                 <button class="more">MORE</button>
@@ -56,7 +104,30 @@
                 <button class="favourite">Star</button>
             </div>
         </article>
-        </template>
+    </template>
+    <footer>
+        <div class="flex-container">
+            <div class="logoimages">
+                <h3>Partners</h3>
+                <div class="poop">
+                    <img class="partnerLogo" src="oesterbrodyreklinik_logo.svg" alt="logo2">
+                    <img class="partnerLogo" src="danskdyrev%C3%A6rnaalborg-logo.png" alt="logo3">
+                    <img class="partnerLogo" src="aa7713a1-51b4-4f27-a01e-c5d0c5e43e7e-w_720.jpg" alt="logo4">
+                    <img class="partnerLogo" src="51640214_256045141960693_1746156612462051328_n.png" alt="logo1"></div>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                Adoptions and Foster: adopt@doggoadopto.com
+                General Information: woof@doggoadopto.com
+                Call us: DK +45 50 19 40 63
+            </div>
+            <div>
+                <h3>Copyright</h3>
+                This website and it's content is the Copyright of Doggo Adopto &copy; Doggo Adopto 2019 All rights reserved.
+            </div>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 
