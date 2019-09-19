@@ -453,6 +453,7 @@ h1 {
     border-radius: var(--border-radius);
     padding: 2rem;
     margin-top: 1rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .formheader {
