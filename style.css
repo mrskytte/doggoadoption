@@ -454,6 +454,7 @@ h1 {
     background-color: var(--color-1);
     border-radius: var(--border-radius);
     padding: 2rem;
+    margin-top: 1rem;
 }
 
 .formheader {
