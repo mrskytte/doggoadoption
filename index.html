@@ -10,7 +10,24 @@
 
 <body>
     <header>
-        <div class="filters">
+       <div class="logodiv">
+           <a class="nonActive" href="index.html"><img class="icon" src="assets/imgs/logo/dogLogoW.svg" /></a>
+       </div>
+        <nav>
+            <ul class="navbar">
+               <li class="navelmt">
+                    <a class="nonActive" href="index.html">ADD</a>
+                </li>
+                <li class="navelmt">
+                    <a class="active" href="index.html">ADOPTING?</a>
+                </li>
+                <li class="navelmt">
+                    <a href="#" class="nonActive">ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="filters">
             <div class="dropdown">
                 <button onclick="clickMe()" class="dropbtn">Sort by</button>
                 <div id="filter" class="dropdown_content">
@@ -23,8 +40,9 @@
         </div>
     </header>
     <main>
+        <div class="data-modal-bg modal-bg hide">      
+    <main>
         <div class="data-modal-wrap modal-wrap hide">
-
             <article class="data-modal modal">
                 <h1 class="data-modal-name modal-name">Piper</h1>
                 <img class="data-modal-img modal-img" alt="Dog Image" src="assets/imgs/dogs/maltese.jpg">
@@ -112,5 +130,6 @@
             </div>
         </div>
     </footer>
+
     <script src="main.js"></script>
 </body></html>
