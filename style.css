@@ -352,13 +352,6 @@ h2 {
     flex-direction: row;
 }
 
-.timeFilter {
-    background-color: var(--color-2);
-    color: white;
-    cursor: pointer;
-    font-family: var(--primary-font);
-}
-
 /*NAVBAR*/
 
 header {
