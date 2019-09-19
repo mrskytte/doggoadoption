@@ -141,27 +141,25 @@ button {
     border-radius: 50%;
 }
 
-/* Style for form page */
+/* Form Styling */
 
-/*.dropdown {
-  position: relative;
-  display: inline-block;
+.form-wrapper {
+    width: 60%;
+    min-width: 350px;
+    margin: auto;
+    background-color: var(--color-2);
+    border-radius: var(--border-radius);
+    padding: 2rem;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--primary-color);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+
+.formheader {
+    text-align: center;
+
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: inline-block;
-}
 
-.dropdown:hover .dropdown-content {display: inline-block;}
+
+
+
+

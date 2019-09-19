@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form name="submit-to-google-sheet" onSubmit="window.location.reload();">
-        <fieldset>
+    <div class="form-wrapper">
+       <h1 class="formheader">Set up for Adoption</h1>
+        <form name="submit-to-google-sheet" onSubmit="window.location.reload();">
             <label for="breed">Breed</label>
             <input name="breed" type="text" id="breed" placeholder="Breed" required>
             <label for="name">Name</label>
@@ -19,18 +20,21 @@
             <input name="sex" type="radio" id="male" value="male" checked>
             <label for="female">Female</label>
             <input name="sex" type="radio" id="female" value="female">
-        </fieldset>
-        <label for="birthday">Birthday</label>
-        <input name="birthday" type="date" placeholder="YYYY-MM-DD" required>
-        <label for="childFriendly">Child Friendly</label>
-        <input name="childFriendly" type="radio" value="Yes">
-        <input name="childFriendly" type="radio" value="No">
-        <label for="location">Location</label>
-        <input name="area" type="text" placeholder="Area">
-         <label for="description">Description</label>
-        <textarea name="longDescription" id="description" cols="30" rows="10"></textarea>
-        <button type="submit">Send</button>
-    </form>
+            <label for="birthday">Birthday</label>
+            <input name="birthday" type="date" placeholder="YYYY-MM-DD" required>
+            <label for="childFriendly">Child Friendly</label>
+            <input name="childFriendly" type="radio" value="Yes">
+            <input name="childFriendly" type="radio" value="No">
+            <label for="otherAnimals">Friendly towards other animals</label>
+            <input name="otherAnimals" type="radio" value="Yes">
+            <input name="otherAnimals" type="radio" value="No">
+            <label for="location">Location</label>
+            <input name="area" type="text" placeholder="Area">
+            <label for="description">Description</label>
+            <textarea name="longDescription" id="description" cols="30" rows="10"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
 
     <script>
