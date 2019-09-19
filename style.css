@@ -353,13 +353,6 @@ h2 {
     flex-direction: row;
 }
 
-.timeFilter {
-    background-color: var(--color-2);
-    color: white;
-    cursor: pointer;
-    font-family: var(--primary-font);
-}
-
 /*NAVBAR*/
 
 header {
@@ -445,6 +438,11 @@ h1 {
     border-radius: 50%;
 }
 
+.maxima {
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+=======
 /* Form Styling */
 
 .form-wrapper {
@@ -520,4 +518,5 @@ form {
 .descriptionwrap textarea::placeholder{
     color: black;
     padding: .5rem 0 0 .5rem
+>>>>>>> origin/master
 }
