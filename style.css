@@ -419,3 +419,26 @@ nav {
     margin: auto;
     margin-bottom: var(--white-space);
 }
+
+/* About Page */
+h1 {
+    color: var(--color-3);
+}
+
+#about {
+    width: 80%;
+    margin: auto;
+}
+
+.photowrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.photowrapper img {
+    max-width: 200px;
+    border-radius: 50%;
+}
