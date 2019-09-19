@@ -442,3 +442,9 @@ h1 {
     max-width: 200px;
     border-radius: 50%;
 }
+
+.maxima {
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+}
